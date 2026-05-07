@@ -356,6 +356,37 @@
   }
 
   // ============================================================
+  // FIX BROKEN INTERNAL LINKS
+  // ============================================================
+  function fixBrokenLinks() {
+    // These pages were 404 error pages from GHL clone.
+    // Redirect files exist but also fix links so users don't see the redirect flash.
+    var linkMap = {
+      'painting-services.html': 'painting-services-central-iowa.html',
+      'terms--conditions.html': 'terms-conditions.html'
+    };
+    var links = document.querySelectorAll('a[href]');
+    links.forEach(function(a) {
+      var href = a.getAttribute('href');
+      Object.keys(linkMap).forEach(function(bad) {
+        if (href === bad || href.endsWith('/' + bad)) {
+          a.setAttribute('href', linkMap[bad]);
+        }
+      });
+    });
+  }
+
+  // ============================================================
+  // FIX MAILTO FORM ACTIONS (remove from HTML to prevent browser warning)
+  // ============================================================
+  function fixMailtoFormActions() {
+    var forms = document.querySelectorAll('form[action^="mailto:"]');
+    forms.forEach(function(form) {
+      form.removeAttribute('action');
+    });
+  }
+
+  // ============================================================
   // INITIALIZE
   // ============================================================
   function init() {
@@ -363,6 +394,8 @@
     createEstimateModal();
     wireUpButtons();
     fixMailtoForms();
+    fixBrokenLinks();
+    fixMailtoFormActions();
     initLazyBackgrounds();
     cleanupDeadScripts();
   }
