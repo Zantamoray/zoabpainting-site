@@ -19,8 +19,11 @@
   // CONFIGURATION - Change these when swapping backends
   // ============================================================
   var CONFIG = {
-    // FormSubmit.co endpoint (no registration needed)
-    // First submission triggers a confirmation email to this address
+    // Primary: Zoab CRM API endpoint (local dashboard)
+    // Falls back to FormSubmit.co if CRM is unreachable
+    crmEndpoint: 'http://127.0.0.1:5005/api/leads',
+    
+    // Backup: FormSubmit.co endpoint (email notification)
     formEndpoint: 'https://formsubmit.co/ajax/zoabpainting@gmail.com',
     
     // YouTube video IDs for the 3 testimonials
@@ -174,6 +177,31 @@
 
       var formData = new FormData(form);
 
+      // Build JSON payload for CRM
+      var crmPayload = {
+        first_name: formData.get('first_name') || '',
+        last_name: formData.get('last_name') || '',
+        email: formData.get('email') || '',
+        phone: formData.get('phone') || '',
+        address: formData.get('address') || '',
+        project_details: formData.get('project_details') || '',
+        source: 'website'
+      };
+
+      // Submit to CRM API (primary) - fire and forget
+      // CRM may be unreachable from GitHub Pages (localhost), so don't block on it
+      if (CONFIG.crmEndpoint) {
+        try {
+          fetch(CONFIG.crmEndpoint, {
+            method: 'POST',
+            body: JSON.stringify(crmPayload),
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            mode: 'cors'
+          }).catch(function() { /* CRM unreachable - that's OK, FormSubmit is backup */ });
+        } catch(e) { /* ignore */ }
+      }
+
+      // Submit to FormSubmit.co (backup/email notification - always works)
       fetch(CONFIG.formEndpoint, {
         method: 'POST',
         body: formData,
@@ -377,6 +405,51 @@
   }
 
   // ============================================================
+  // FIX GHL ANIMATIONS (trigger elements with data-animation-class)
+  // ============================================================
+  function fixAnimations() {
+    // GHL uses data-animation-class to store animation classes
+    // and sets opacity:0 inline. Nuxt hydration JS would trigger these
+    // on scroll via IntersectionObserver. We trigger them on load/scroll.
+    var animated = document.querySelectorAll('[data-animation-class]');
+    if (!animated.length) return;
+
+    // Simple IntersectionObserver approach - triggers when element enters viewport
+    if ('IntersectionObserver' in window) {
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            var el = entry.target;
+            var animClass = el.getAttribute('data-animation-class');
+            if (animClass) {
+              // Add the animation classes
+              animClass.split(' ').forEach(function(cls) {
+                if (cls) el.classList.add(cls);
+              });
+              // Override the opacity:0 inline style
+              el.style.opacity = '1';
+            }
+            observer.unobserve(el);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      animated.forEach(function(el) { observer.observe(el); });
+    } else {
+      // Fallback: just show everything immediately
+      animated.forEach(function(el) {
+        el.style.opacity = '1';
+        var animClass = el.getAttribute('data-animation-class');
+        if (animClass) {
+          animClass.split(' ').forEach(function(cls) {
+            if (cls) el.classList.add(cls);
+          });
+        }
+      });
+    }
+  }
+
+  // ============================================================
   // FIX MAILTO FORM ACTIONS (remove from HTML to prevent browser warning)
   // ============================================================
   function fixMailtoFormActions() {
@@ -398,6 +471,7 @@
     fixMailtoFormActions();
     initLazyBackgrounds();
     cleanupDeadScripts();
+    fixAnimations();
   }
 
   // Run when DOM is ready

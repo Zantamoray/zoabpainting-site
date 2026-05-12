@@ -261,6 +261,72 @@
   height: 100%;
 }
 
+/* === HERO FEATURE BADGES === */
+/* The 4 trust badges: 30 Years, Clean Crews, Quick Scheduling, Sherwin Williams */
+#row-LVHctEqG4Z {
+  padding: 15px 0 0;
+  width: 90%;
+  margin: 40px auto 0;
+}
+
+#row-LVHctEqG4Z .c-column {
+  text-align: center;
+  flex: 1;
+}
+
+/* The badge text containers */
+#row-LVHctEqG4Z .text-output {
+  background: rgba(102, 0, 0, 0.85);
+  color: #ffffff !important;
+  padding: 16px 12px;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 218, 0, 0.6);
+  text-align: center;
+  backdrop-filter: blur(4px);
+}
+
+#row-LVHctEqG4Z .text-output p {
+  color: #ffffff !important;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Make badges visible on mobile too */
+@media only screen and (max-width: 767px) {
+  #row-LVHctEqG4Z {
+    display: flex !important;
+    width: 100% !important;
+    margin: 20px auto 0 !important;
+    padding: 10px !important;
+  }
+  #row-LVHctEqG4Z > .inner {
+    display: flex !important;
+    flex-wrap: wrap !important;
+  }
+  #row-LVHctEqG4Z .c-column {
+    flex: 0 0 48% !important;
+    margin-bottom: 8px;
+  }
+  #row-LVHctEqG4Z .text-output {
+    padding: 10px 8px;
+    font-size: 12px;
+  }
+  #row-LVHctEqG4Z .text-output p {
+    font-size: 12px;
+  }
+  /* Override desktop-only on the badge row and its children for mobile */
+  #row-LVHctEqG4Z.desktop-only,
+  #row-LVHctEqG4Z .desktop-only {
+    display: flex !important;
+  }
+  #row-LVHctEqG4Z .c-paragraph.desktop-only {
+    display: block !important;
+  }
+}
+
 /* === STAT BADGES IN HERO === */
 /* The 4 badges: "30 Years", "Clean & Friendly", "Quick Scheduling", "Sherwin Williams" */
 #row-oSgA33l1pb .c-column {
