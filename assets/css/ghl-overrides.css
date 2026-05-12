@@ -1,0 +1,461 @@
+/* ============================================
+   GHL Overrides CSS - Zoab Painting Website
+   Fixes for missing Nuxt hydration styles
+   ============================================ */
+
+/* === BODY & PAGE BACKGROUND === */
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #f7f5f0;
+  font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* === BACKGROUND IMAGES (catch-all for all bg-section-* and bg-col-* classes) === */
+[class*="bg-section-"],
+[class*="bg-col-"] {
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+
+/* === SECTION STRUCTURE === */
+.c-section {
+  position: relative;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.c-section .c-wrapper {
+  position: relative;
+  z-index: 1;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.c-section .section-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.c-section .section-bg .bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.c-section .section-bg .bg-image > div {
+  width: 100%;
+  height: 100%;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+
+/* === ROW LAYOUT === */
+.c-row {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.c-row .inner {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+/* === COLUMN LAYOUT === */
+.c-column {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.c-column .inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.c-column .col-bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.c-column .col-bg-image > div {
+  width: 100%;
+  height: 100%;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+
+/* === ELEMENTS === */
+.c-element {
+  position: relative;
+  z-index: 1;
+}
+
+/* === IMAGE CONTAINERS === */
+.image-container {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* === NAVIGATION === */
+.nav-menu-wrapper {
+  position: relative;
+  z-index: 1000;
+}
+
+.hl_header--sticky {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: inherit;
+}
+
+.nav-menu-wrapper .c-wrapper {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.nav-menu-wrapper .c-row .inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Desktop nav */
+.nav-menu-wrapper .menu-items {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.nav-menu-wrapper .menu-items li {
+  position: relative;
+}
+
+.nav-menu-wrapper .menu-items li a {
+  text-decoration: none;
+  display: block;
+  padding: 10px 15px;
+  white-space: nowrap;
+}
+
+/* Dropdown menus */
+.nav-menu-wrapper .menu-items li .sub-menu-wrapper {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+  z-index: 1001;
+  display: none;
+}
+
+.nav-menu-wrapper .menu-items li:hover .sub-menu-wrapper {
+  display: block;
+}
+
+.nav-menu-wrapper .menu-items li .sub-menu-wrapper .sub-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu-wrapper .menu-items li .sub-menu-wrapper .sub-menu li a {
+  padding: 10px 20px;
+  display: block;
+}
+
+/* Hamburger / mobile toggle */
+.nav-menu-wrapper .hamburger-menu {
+  display: none;
+  cursor: pointer;
+}
+
+/* === BUTTONS === */
+.c-button {
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.c-button:hover {
+  opacity: 0.9;
+}
+
+/* === TEXT ELEMENTS === */
+.c-heading,
+.c-sub-heading,
+.c-paragraph {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* === DIVIDER === */
+.c-divider hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 0;
+}
+
+/* === FORM ELEMENTS === */
+.c-form {
+  width: 100%;
+}
+
+.c-form .input-group {
+  margin-bottom: 10px;
+}
+
+.c-form input,
+.c-form textarea,
+.c-form select {
+  width: 100%;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+/* === ACCORDION / FAQ === */
+.c-accordion .accordion-item {
+  border: 1px solid #e0e0e0;
+  margin-bottom: -1px;
+}
+
+.c-accordion .accordion-header {
+  cursor: pointer;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.c-accordion .accordion-content {
+  padding: 0 20px;
+  overflow: hidden;
+}
+
+/* === IMAGE SLIDER/CAROUSEL === */
+.c-image-slider {
+  position: relative;
+  overflow: hidden;
+}
+
+/* === VIDEO === */
+.c-video {
+  position: relative;
+  width: 100%;
+}
+
+.c-video .video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.c-video .video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* === REVIEWS WIDGET === */
+.review-widget-wrap {
+  width: 100%;
+}
+
+/* === VISIBILITY HELPERS === */
+.visibility-on-mobile-only {
+  display: none !important;
+}
+
+.visibility-on-desktop-only {
+  display: block !important;
+}
+
+/* === RESPONSIVE BREAKPOINTS === */
+
+/* Tablet: 481px - 1024px */
+@media (min-width: 481px) and (max-width: 1024px) {
+  .c-section .c-wrapper {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .c-row .inner {
+    flex-wrap: wrap;
+  }
+
+  .c-column {
+    width: 100% !important;
+    flex: 0 0 100% !important;
+  }
+
+  .nav-menu-wrapper .hamburger-menu {
+    display: block;
+  }
+
+  .nav-menu-wrapper .menu-items {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+  }
+
+  .nav-menu-wrapper .menu-items.open {
+    display: flex;
+  }
+
+  .visibility-on-tablet-only {
+    display: block !important;
+  }
+}
+
+/* Mobile: up to 480px */
+@media (max-width: 480px) {
+  .c-section .c-wrapper {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+
+  .c-row .inner {
+    flex-wrap: wrap;
+  }
+
+  .c-column {
+    width: 100% !important;
+    flex: 0 0 100% !important;
+  }
+
+  .nav-menu-wrapper .hamburger-menu {
+    display: block;
+  }
+
+  .nav-menu-wrapper .menu-items {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+  }
+
+  .nav-menu-wrapper .menu-items.open {
+    display: flex;
+  }
+
+  .visibility-on-mobile-only {
+    display: block !important;
+  }
+
+  .visibility-on-desktop-only {
+    display: none !important;
+  }
+
+  .c-heading {
+    font-size: 1.5em;
+  }
+}
+
+/* === FOOTER === */
+.c-section:last-of-type {
+  margin-bottom: 0;
+}
+
+/* === UTILITY === */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* === OVERLAY FIX === */
+.section-bg .bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* === ICON ELEMENTS === */
+.c-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.c-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* === LINK RESET === */
+a {
+  color: inherit;
+}
+
+/* === FLEX ALIGNMENT HELPERS === */
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.flex-col {
+  flex-direction: column;
+}

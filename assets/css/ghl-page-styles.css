@@ -1,0 +1,121 @@
+/* GHL Page-Specific Layout CSS - Extracted from live zoabpainting.com */
+/* These define the flex/layout properties for each section, row, and column by ID */
+
+:root {
+  --primary: #37ca37;
+  --secondary: #188bf6;
+  --white: #ffffff;
+  --gray: #cbd5e0;
+  --black: #000000;
+  --red: #e93d3d;
+  --orange: #f6ad55;
+  --yellow: #faf089;
+  --green: #9ae6b4;
+  --teal: #81e6d9;
+  --malibu: #63b3ed;
+  --indigo: #757BBD;
+  --purple: #d6bcfa;
+  --pink: #fbb6ce;
+  --transparent: transparent;
+  --overlay: rgba(0, 0, 0, 0.5);
+  --color-lsj68ia8: #FCDA58;
+  --color-lsj6azxl: #FFDA00;
+  --color-lsj6ekhy: #3E4A58;
+  --color-lsj6fm5d: #315A9E;
+  --color-lsj78xqv: rgba(0,0,0,0.84);
+  --color-lsj7iac5: #5490D6;
+  --color-lsj7v9pi: #7BA7E4;
+  --color-lsnsa134: #10B90F;
+  --color-lsxpcf22: rgba(0,0,0,0.46);
+  --color-ltj4l3hs: #E47D00;
+  --color-ly3s0zys: #FFFEEA;
+  --color-ly3s1tlk: #F7F5F0;
+  --color-m3qfy7zq: #660000;
+  --color-m3ue8wie: #595959;
+  --color-m3uf4byq: #dfb614;
+  --color-m3yg2i8l: #f7f5f0;
+  --color-m3ygaoxb: #435F8A;
+  --arial: 'Arial';
+  --lato: 'Lato';
+  --open-sans: 'Open Sans';
+  --montserrat: 'Montserrat';
+  --roboto: 'Roboto';
+  --abril-fatface: 'Abril Fatface';
+  --alatsi: 'Alatsi';
+  --headlinefont: 'Montserrat';
+  --contentfont: 'Lato';
+  --text-color: #000000;
+  --link-color: #188bf6;
+}
+
+/* Section inner widths */
+#section-Rvi_T4ArD7 > .inner { max-width: 100%; }
+#section-izqmGF2wLA > .inner { max-width: 100%; }
+#section-TI1Hz1wDmU > .inner { max-width: 1170px; }
+#section-pCoLEHvxEU > .inner { max-width: 100%; }
+#section-t60waLCTbi > .inner { max-width: 1170px; }
+#section-uWs9y7VQbc > .inner { max-width: 1170px; }
+#section-xTcwXIIjWj > .inner { max-width: 1170px; }
+#section-KZQ1tBRAac > .inner { max-width: 1170px; }
+#section-i7taU4VqBy > .inner { max-width: 100%; }
+#section-Tlu3sEEIy8 > .inner { max-width: 1170px; }
+#section-V9uqisD7wR > .inner { max-width: 100%; }
+#section-cTXGlvckOa > .inner { max-width: 100%; }
+#section-2oH1pZY2v3 > .inner { max-width: 1170px; }
+
+/* Column inner flex properties */
+#col-zDiv5I6zTq > .inner { flex-flow: column; justify-content: center; align-items: inherit; }
+#col-gMUtiJuysz > .inner { flex-flow: column; justify-content: flex-start; align-items: inherit; }
+#col-LiTBiCYj5h > .inner { flex-flow: wrap; justify-content: flex-end; align-items: flex-end; }
+#col-2YAwbf8kig > .inner { flex-flow: column; justify-content: flex-start; align-items: flex-end; }
+#col-BRsujVI34s > .inner { flex-flow: column; justify-content: center; align-items: center; }
+#col-1poSeUMqt5 > .inner,
+#col-5ojsWfZ5IZ > .inner,
+#col-MtprXqZtQ1 > .inner,
+#col-dmnC_jo_Ge > .inner { flex-flow: column; justify-content: center; align-items: inherit; }
+#col-1TJRn6nrpb > .inner { flex-flow: column; justify-content: center; align-items: center; }
+#col-XYMER-5wdm > .inner,
+#col-dLpA57F6oB > .inner,
+#col-tK2VU3ldDk > .inner { flex-flow: column; justify-content: center; align-items: inherit; }
+#col-9tPK3uEBI_ > .inner,
+#col-GWgs56wSBI > .inner,
+#col-ISemz8XGBp > .inner,
+#col-TIQMJDJg-D > .inner,
+#col-U1aO4aRIrB > .inner,
+#col-ZSnaFxNOtJ > .inner,
+#col-vxVs-SGDgE > .inner,
+#col-xXrX9vfzKW > .inner { flex-flow: column; justify-content: center; align-items: inherit; }
+#col-LbIL8NPVZD > .inner,
+#col-PRXMqcbWXR > .inner,
+#col-ju80L-9Pgv > .inner,
+#col-xzliAS5g3e > .inner { flex-flow: column; justify-content: flex-start; align-items: inherit; }
+#col-vQrwKQuQka > .inner { flex-flow: column; justify-content: center; align-items: inherit; }
+#col-7NS1KOainC > .inner { flex-flow: column; justify-content: center; align-items: inherit; }
+#col--jPcHKzslF > .inner,
+#col-WpYa4BDZc9 > .inner,
+#col-cPZwj01IP8 > .inner { flex-flow: column; justify-content: flex-start; align-items: inherit; }
+#col-XX2KnP_uhu > .inner,
+#col-hcLsp-YwEW > .inner,
+#col-thftoSvEcP > .inner { flex-flow: column; justify-content: center; align-items: inherit; }
+#col-MySRRQkSN3 > .inner { flex-flow: column; justify-content: center; align-items: inherit; }
+#col-bqsRmoaBRu > .inner { flex-flow: column; justify-content: center; align-items: inherit; }
+#col-t7xEF6i3Jr > .inner { flex-flow: column; justify-content: center; align-items: inherit; }
+#col--LQeQJmtbl > .inner,
+#col-BC_b5Bs8XF > .inner,
+#col-QOyiWYsuke > .inner,
+#col-cx4bvlooWB > .inner { flex-flow: column; justify-content: flex-start; align-items: inherit; }
+#col-un871gUwgV > .inner { flex-flow: column; justify-content: center; align-items: inherit; }
+#col-HBZu8-GDjh > .inner,
+#col-S2sCkEt5AX > .inner,
+#col-VOp6VYgX8I > .inner,
+#col-kT6ekSYkrr > .inner,
+#col-t7Jtmj6Gnv > .inner { flex-flow: column; justify-content: center; align-items: inherit; }
+#col-EhglwiHs_i > .inner,
+#col-Uh6iNLSsBk > .inner { flex-flow: column; justify-content: center; align-items: inherit; }
+#col-tCNR8UBhuLB > .inner { flex-flow: column; justify-content: center; align-items: inherit; }
+#col-2Xn1yLEnGM- > .inner,
+#col-Ys1OMWUuVl4 > .inner,
+#col-cZXpxDVxxJ > .inner,
+#col-cvsckgmkN6m > .inner,
+#col-fU4zwjthy81 > .inner { flex-flow: column; justify-content: flex-start; align-items: inherit; }
+#col-UyKJ4_l3g__ > .inner { flex-flow: column; justify-content: center; align-items: inherit; }
