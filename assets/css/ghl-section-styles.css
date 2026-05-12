@@ -1,0 +1,348 @@
+/* GHL Page-Specific Section Styles - Extracted from computed styles of zoabpainting.com */
+/* These replace the inline styles that Nuxt hydration would normally add */
+
+/* === SECTION STYLES === */
+
+/* Nav header section */
+#section-Rvi_T4ArD7 {
+  padding: 5px 0;
+  background-color: transparent;
+}
+
+/* Hero section */
+#section-izqmGF2wLA {
+  padding: 0;
+  margin-top: -40px;
+  background-color: transparent;
+  min-height: 600px;
+}
+
+/* Testimonials section */
+#section-TI1Hz1wDmU {
+  padding: 20px 0;
+  margin-top: 80px;
+  background-color: transparent;
+}
+
+/* Benefits section - DARK RED */
+#section-pCoLEHvxEU {
+  padding: 5px 0 40px;
+  margin-top: 40px;
+  background-color: #660000 !important;
+  color: #ffffff;
+}
+#section-pCoLEHvxEU h2,
+#section-pCoLEHvxEU p,
+#section-pCoLEHvxEU .c-heading,
+#section-pCoLEHvxEU .c-paragraph,
+#section-pCoLEHvxEU .c-sub-heading {
+  color: #ffffff;
+}
+
+/* Iowa-Nice Process section */
+#section-t60waLCTbi {
+  padding: 20px 0;
+  background-color: transparent;
+}
+
+/* CTA / Referral section (bg image 1) */
+#section-uWs9y7VQbc {
+  padding: 200px 0 0;
+  background-color: transparent;
+}
+
+/* CTA section (bg image 2) */
+#section-xTcwXIIjWj {
+  padding: 200px 0 0;
+  background-color: transparent;
+}
+
+/* Areas of Expertise header */
+#section-KZQ1tBRAac {
+  padding: 20px 0 0;
+  margin: 0 72.5px;
+  background-color: transparent;
+}
+
+/* Service cards section */
+#section-i7taU4VqBy {
+  padding: 0 0 5px;
+  margin-bottom: 40px;
+  background-color: transparent;
+}
+
+/* Quality section - DARK RED */
+#section-Tlu3sEEIy8 {
+  padding: 20px 0;
+  background-color: #660000 !important;
+  color: #ffffff;
+}
+#section-Tlu3sEEIy8 h2,
+#section-Tlu3sEEIy8 h1,
+#section-Tlu3sEEIy8 p,
+#section-Tlu3sEEIy8 .c-heading,
+#section-Tlu3sEEIy8 .c-paragraph {
+  color: #ffffff;
+}
+
+/* Satisfaction / About section */
+#section-V9uqisD7wR {
+  padding: 20px 0;
+  background-color: transparent;
+}
+
+/* People section */
+#section-cTXGlvckOa {
+  padding: 5px 0;
+  background-color: transparent;
+}
+
+/* Footer section - DARK RED */
+#section-2oH1pZY2v3 {
+  padding: 5px 0 0;
+  background-color: #660000 !important;
+  color: #ffffff;
+}
+#section-2oH1pZY2v3 h2,
+#section-2oH1pZY2v3 p,
+#section-2oH1pZY2v3 a,
+#section-2oH1pZY2v3 .c-heading,
+#section-2oH1pZY2v3 .c-paragraph {
+  color: #ffffff;
+}
+
+/* === ROW STYLES === */
+
+/* Nav rows */
+#row-YSh5CcI1eQ {
+  padding: 0 10px 0 0;
+  width: 75%;
+  margin: 0 auto;
+}
+
+#row-jXvZp7k-3i {
+  padding: 0 0 5px;
+  width: 75%;
+  margin: 0 auto;
+}
+
+/* Hero rows */
+#row-HSL1nTzFuh {
+  padding: 0;
+  width: 63%;
+  margin: 10px auto 0;
+}
+
+#row-S_qFOQoIYL {
+  padding: 10px 0 15px;
+  width: 50%;
+  margin: 0 auto;
+}
+
+#row-oSgA33l1pb {
+  padding: 15px 0;
+  width: 100%;
+  margin: 0;
+}
+
+#row-LVHctEqG4Z {
+  padding: 15px 0 0;
+  width: 90%;
+  margin: 40px auto 0;
+}
+
+/* Standard content rows */
+#row-wf3NtWhdt6,
+#row-Tx-PXNreXn,
+#row-vsiItZdP29 {
+  padding: 15px 0;
+  width: 100%;
+  margin: 0;
+}
+
+#row-u1z0kBAqYy {
+  padding: 5px 0 0;
+  margin: 20px 0 0;
+  width: 100%;
+}
+
+#row-3jLSXqPqXM {
+  padding: 15px 0 5px;
+  width: 100%;
+  margin: 0;
+}
+
+#row-toE-DSdB3C {
+  padding: 5px 0;
+  width: 90%;
+  margin: 0 auto;
+}
+
+#row-oVJwUZ9wh6,
+#row-IqeTSAdsAt,
+#row-0s2LMnNYij,
+#row-37CVbypKgz {
+  padding: 15px 0;
+  width: 100%;
+  margin: 0;
+}
+
+#row-udYWxYrnGl {
+  padding: 15px 0;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* === HERO SECTION SPECIFIC === */
+
+/* Hero background wrapper - ensure minimum height */
+.bg-section-izqmGF2wLA {
+  min-height: 600px;
+}
+
+/* Hero text styling */
+#section-izqmGF2wLA h1 {
+  color: #ffffff;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+#section-izqmGF2wLA h2 {
+  color: #ffffff;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+#section-izqmGF2wLA p {
+  color: #ffffff;
+}
+
+/* === BUTTON STYLES === */
+.c-button button,
+.c-button a {
+  display: inline-block;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+/* Yellow CTA buttons */
+.c-button button {
+  background-color: #FCDA58;
+  color: #000000;
+}
+
+.c-button button:hover {
+  background-color: #FFDA00;
+  transform: translateY(-1px);
+}
+
+/* === TESTIMONIAL VIDEO SECTION === */
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.video-overlay,
+.thumbnail-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* === STAT BADGES IN HERO === */
+/* The 4 badges: "30 Years", "Clean & Friendly", "Quick Scheduling", "Sherwin Williams" */
+#row-oSgA33l1pb .c-column {
+  text-align: center;
+}
+
+#row-oSgA33l1pb p {
+  color: #ffffff;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+/* === SERVICE CARDS === */
+#section-i7taU4VqBy .c-column {
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin: 10px;
+}
+
+#section-i7taU4VqBy .image-container img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* === PROCESS STEPS === */
+#section-t60waLCTbi .image-container img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+/* === BBB BADGE === */
+img[alt*="BBB Business Review"] {
+  max-width: 200px;
+  height: auto;
+}
+
+/* === MAP IMAGE === */
+img[alt*="map"],
+img[src*="map-"] {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* === FOOTER === */
+#section-2oH1pZY2v3 a {
+  color: #FCDA58;
+}
+#section-2oH1pZY2v3 a:hover {
+  color: #FFDA00;
+}
+
+/* === RESPONSIVE === */
+@media only screen and (max-width: 767px) {
+  #section-izqmGF2wLA {
+    min-height: 400px;
+  }
+  
+  #section-KZQ1tBRAac {
+    margin: 0 10px;
+  }
+  
+  #row-YSh5CcI1eQ,
+  #row-jXvZp7k-3i,
+  #row-HSL1nTzFuh,
+  #row-S_qFOQoIYL {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+  
+  #section-i7taU4VqBy .c-column {
+    margin: 10px 0;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #section-uWs9y7VQbc,
+  #section-xTcwXIIjWj {
+    padding: 100px 0 0;
+  }
+}
