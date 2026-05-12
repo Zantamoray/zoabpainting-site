@@ -414,39 +414,39 @@
     var animated = document.querySelectorAll('[data-animation-class]');
     if (!animated.length) return;
 
-    // Simple IntersectionObserver approach - triggers when element enters viewport
+    function triggerAnimation(el) {
+      var animClass = el.getAttribute('data-animation-class');
+      if (animClass && (el.style.opacity === '0' || el.style.opacity === '')) {
+        animClass.split(' ').forEach(function(cls) {
+          if (cls) el.classList.add(cls);
+        });
+        el.style.opacity = '1';
+      }
+    }
+
+    // Use IntersectionObserver for scroll-triggered animations
     if ('IntersectionObserver' in window) {
       var observer = new IntersectionObserver(function(entries) {
         entries.forEach(function(entry) {
           if (entry.isIntersecting) {
-            var el = entry.target;
-            var animClass = el.getAttribute('data-animation-class');
-            if (animClass) {
-              // Add the animation classes
-              animClass.split(' ').forEach(function(cls) {
-                if (cls) el.classList.add(cls);
-              });
-              // Override the opacity:0 inline style
-              el.style.opacity = '1';
-            }
-            observer.unobserve(el);
+            triggerAnimation(entry.target);
+            observer.unobserve(entry.target);
           }
         });
-      }, { threshold: 0.1 });
+      }, { threshold: 0.05, rootMargin: '50px' });
 
       animated.forEach(function(el) { observer.observe(el); });
-    } else {
-      // Fallback: just show everything immediately
+    }
+
+    // Also trigger immediately for any elements already visible
+    // (handles elements above the fold and desktop-only elements)
+    setTimeout(function() {
       animated.forEach(function(el) {
-        el.style.opacity = '1';
-        var animClass = el.getAttribute('data-animation-class');
-        if (animClass) {
-          animClass.split(' ').forEach(function(cls) {
-            if (cls) el.classList.add(cls);
-          });
+        if (el.style.opacity === '0') {
+          triggerAnimation(el);
         }
       });
-    }
+    }, 500);
   }
 
   // ============================================================
